@@ -26,9 +26,9 @@
     "test:watch": "bun test --watch"
   },
   "dependencies": {
-    "@babel/core": "esm",
-    "@babel/traverse": "esm",
-    "@babel/types": "esm",
+    "@babel/core": "next",
+    "@babel/traverse": "next",
+    "@babel/types": "next",
     "@codemod/parser": "workspace:^"
   },
   "devDependencies": {

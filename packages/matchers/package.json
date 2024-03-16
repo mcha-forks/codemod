@@ -26,13 +26,13 @@
     "test:watch": "bun test --watch"
   },
   "dependencies": {
-    "@babel/types": "esm",
+    "@babel/types": "next",
     "@codemod/utils": "workspace:^"
   },
   "devDependencies": {
-    "@babel/core": "esm",
-    "@babel/generator": "esm",
-    "@babel/traverse": "esm",
+    "@babel/core": "next",
+    "@babel/generator": "next",
+    "@babel/traverse": "next",
     "@codemod/core": "workspace:^",
     "@codemod/parser": "workspace:^",
     "@types/babel__core": "^7.20.0",
