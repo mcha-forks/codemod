@@ -126,6 +126,21 @@ export function or<T, U, V, W, X, Y, Z, A, B, C, D, E>(
   eleventh: Matcher<D> | D,
   twelveth: Matcher<E> | E,
 ): Matcher<T | U | V | W | X | Y | Z | A | B | C | D | E>;
+export function or<T, U, V, W, X, Y, Z, A, B, C, D, E, F>(
+  first: Matcher<T> | T,
+  second: Matcher<U> | U,
+  third: Matcher<V> | V,
+  fourth: Matcher<W> | W,
+  fifth: Matcher<X> | X,
+  sixth: Matcher<Y> | Y,
+  seventh: Matcher<Z> | Z,
+  eighth: Matcher<A> | A,
+  nineth: Matcher<B> | B,
+  tenth: Matcher<C> | C,
+  eleventh: Matcher<D> | D,
+  twelveth: Matcher<E> | E,
+  thirteenth: Matcher<F> | F,
+): Matcher<T | U | V | W | X | Y | Z | A | B | C | D | E | F>;
 export function or<T, A extends Array<Matcher<T> | T>>(
   ...matchersOrValues: A
 ): Matcher<T> {
