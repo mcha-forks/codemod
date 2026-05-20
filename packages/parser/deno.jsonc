@@ -1,0 +1,9 @@
+{
+  "name": "@codemod/parser",
+  "version": "1.4.3",
+  "license": "Apache-2.0",
+  "exports": "./mod.ts",
+  "imports": {
+    "@std/expect": "jsr:@std/expect@^1.0.19"
+  }
+}

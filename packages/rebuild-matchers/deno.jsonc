@@ -1,0 +1,41 @@
+{
+  "name": "@codemod/rebuild-matchers",
+  "version": "0.1.0",
+  "publish": false,
+  "license": "Apache-2.0",
+  "exports": "./mod.ts",
+  "imports": {
+    "ejs": "npm:ejs@^5.0.2"
+  },
+  "tasks": {
+    "generate": "deno run -P=generate main.ts"
+  },
+  "test": {
+    "permissions": {
+      "env": {
+        // @babel/types -> @babel/core -> obug
+        "ignore": true
+      },
+      "read": [
+        "../matchers/lib/matchers/generated.ts"
+      ],
+      "run": [
+        "deno"
+      ]
+    }
+  },
+  "permissions": {
+    "generate": {
+      "env": {
+        // @babel/types -> @babel/core -> obug
+        "ignore": true
+      },
+      "run": [
+        "deno"
+      ],
+      "write": [
+        "../matchers/lib/matchers/generated.ts"
+      ]
+    }
+  }
+}

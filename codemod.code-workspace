@@ -1,9 +1,6 @@
 {
 	"folders": [
 		{
-			"path": "packages/cli"
-		},
-		{
 			"path": "packages/core"
 		},
 		{
@@ -21,7 +18,6 @@
 	],
 	"settings": {
 		"search.exclude": {
-			"**/build": true,
 			"**/coverage": true
 		}
 	}

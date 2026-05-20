@@ -3,45 +3,47 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  check:
+    name: Type check
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-        package:
-          - cli
-          - core
-          - matchers
-          - parser
-          - rebuild-matchers
-          - utils
-
-    env:
-      CI: true
-
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7
+      - uses: actions/checkout@v6
+      - uses: denoland/setup-deno@v2
+      - run: deno check
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: pnpm
+  fmt:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: denoland/setup-deno@v2
+      - run: deno fmt --check
 
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: denoland/setup-deno@v2
+      - run: deno lint
 
-      - name: Build
-        working-directory: packages/${{ matrix.package }}
-        run: pnpm build
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: denoland/setup-deno@v2
+      - run: deno test -P
 
-      - name: Run Linter
-        working-directory: packages/${{ matrix.package }}
-        run: pnpm lint
-
-      - name: Run Tests
-        working-directory: packages/${{ matrix.package }}
-        run: pnpm test
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    needs: [check, fmt, lint, test]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: denoland/setup-deno@v2
+      - run: deno publish

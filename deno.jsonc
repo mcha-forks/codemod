@@ -1,0 +1,17 @@
+{
+  "workspace": [
+    "packages/*"
+  ],
+  "imports": {
+    "@babel/core": "npm:@babel/core@^8.0.0-rc.5",
+    "@babel/generator": "npm:@babel/generator@^8.0.0-rc.5",
+    "@babel/parser": "npm:@babel/parser@^8.0.0-rc.5",
+    "@babel/traverse": "npm:@babel/traverse@^8.0.0-rc.5",
+    "@babel/types": "npm:@babel/types@^8.0.0-rc.5",
+    "@babel/template": "npm:@babel/template@^8.0.0-rc.5",
+    "@std/assert": "jsr:@std/assert@^1.0.19"
+  },
+  "unstable": [
+    "raw-imports"
+  ]
+}

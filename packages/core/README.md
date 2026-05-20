@@ -1,25 +1,26 @@
 # @codemod/core
 
-Runs babel plugins for codemods, i.e. by preserving formatting using [Recast](https://github.com/benjamn/recast).
+Runs babel plugins for codemods, i.e. by preserving formatting using
+[Recast](https://github.com/benjamn/recast).
 
 ## Install
 
-Install from [npm](https://npmjs.com/):
+Install from [jsr](https://jsr.io/):
 
 ```sh
-$ npm install @codemod/core
+$ deno add jsr:@codemod/core
 ```
 
 ## Usage
 
 ```ts
-import { transform } from '@codemod-esm/core'
+import { transform } from "@codemod/core";
 
-const result = transform('a ?? b', {
-  plugins: ['@babel/plugin-proposal-nullish-coalescing-operator'],
-})
+const result = transform("a ?? b", {
+  plugins: ["@babel/plugin-proposal-nullish-coalescing-operator"],
+});
 
-console.log(result.code)
+console.log(result.code);
 /*
 var _a;
 (_a = a) !== null && _a !== void 0 ? _a : b
@@ -28,14 +29,20 @@ var _a;
 
 ## Contributing
 
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for information on setting up the project for development and on contributing to the project.
+See [CONTRIBUTING.md](../../CONTRIBUTING.md) for information on setting up the
+project for development and on contributing to the project.
 
 ## License
 
 Copyright 2019 Brian Donovan
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at
 
     http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.

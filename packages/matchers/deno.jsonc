@@ -1,0 +1,17 @@
+{
+  "name": "@codemod/matchers",
+  "version": "1.7.2",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./mod.ts",
+    "./__internal/matchers/generated": "./lib/matchers/generated.ts"
+  },
+  "test": {
+    "permissions": {
+      "env": {
+        // @babel/types -> @babel/core -> obug
+        "ignore": true
+      }
+    }
+  }
+}
