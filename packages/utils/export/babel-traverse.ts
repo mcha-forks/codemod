@@ -1,2 +1,2 @@
 export * from "@babel/traverse";
-export { default as default } from "@babel/traverse";
+export { default } from "@babel/traverse";
