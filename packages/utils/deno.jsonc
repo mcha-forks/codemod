@@ -2,7 +2,14 @@
   "name": "@codemod/utils",
   "version": "2.0.0",
   "license": "Apache-2.0",
-  "exports": "./mod.ts",
+  "exports": {
+    ".": "./mod.ts",
+    "./babel-core": "./export/babel-core.ts",
+    "./babel-generator": "./export/babel-generator.ts",
+    "./babel-template": "./export/babel-template.ts",
+    "./babel-traverse": "./export/babel-traverse.ts",
+    "./babel-types": "./export/babel-types.ts"
+  },
   "test": {
     "permissions": {
       "env": {
