@@ -87,6 +87,45 @@ export function or<T, U, V, W, X, Y, Z, A, B>(
   eighth: Matcher<A> | A,
   nineth: Matcher<B> | B,
 ): Matcher<T | U | V | W | X | Y | Z | A | B>;
+export function or<T, U, V, W, X, Y, Z, A, B, C>(
+  first: Matcher<T> | T,
+  second: Matcher<U> | U,
+  third: Matcher<V> | V,
+  fourth: Matcher<W> | W,
+  fifth: Matcher<X> | X,
+  sixth: Matcher<Y> | Y,
+  seventh: Matcher<Z> | Z,
+  eighth: Matcher<A> | A,
+  nineth: Matcher<B> | B,
+  tenth: Matcher<C> | C,
+): Matcher<T | U | V | W | X | Y | Z | A | B | C>;
+export function or<T, U, V, W, X, Y, Z, A, B, C, D>(
+  first: Matcher<T> | T,
+  second: Matcher<U> | U,
+  third: Matcher<V> | V,
+  fourth: Matcher<W> | W,
+  fifth: Matcher<X> | X,
+  sixth: Matcher<Y> | Y,
+  seventh: Matcher<Z> | Z,
+  eighth: Matcher<A> | A,
+  nineth: Matcher<B> | B,
+  tenth: Matcher<C> | C,
+  eleventh: Matcher<D> | D,
+): Matcher<T | U | V | W | X | Y | Z | A | B | C | D>;
+export function or<T, U, V, W, X, Y, Z, A, B, C, D, E>(
+  first: Matcher<T> | T,
+  second: Matcher<U> | U,
+  third: Matcher<V> | V,
+  fourth: Matcher<W> | W,
+  fifth: Matcher<X> | X,
+  sixth: Matcher<Y> | Y,
+  seventh: Matcher<Z> | Z,
+  eighth: Matcher<A> | A,
+  nineth: Matcher<B> | B,
+  tenth: Matcher<C> | C,
+  eleventh: Matcher<D> | D,
+  twelveth: Matcher<E> | E,
+): Matcher<T | U | V | W | X | Y | Z | A | B | C | D | E>;
 export function or<T, A extends Array<Matcher<T> | T>>(
   ...matchersOrValues: A
 ): Matcher<T> {
