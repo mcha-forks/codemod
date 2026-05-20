@@ -8,7 +8,8 @@
     "./babel-generator": "./export/babel-generator.ts",
     "./babel-template": "./export/babel-template.ts",
     "./babel-traverse": "./export/babel-traverse.ts",
-    "./babel-types": "./export/babel-types.ts"
+    "./babel-types": "./export/babel-types.ts",
+    "./babel-helper-validator-identifier": "./export/babel-helper-validator-identifier.ts"
   },
   "test": {
     "permissions": {

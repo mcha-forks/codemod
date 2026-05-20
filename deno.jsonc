@@ -5,6 +5,7 @@
   "imports": {
     "@babel/core": "npm:@babel/core@^8.0.0-rc.5",
     "@babel/generator": "npm:@babel/generator@^8.0.0-rc.5",
+    "@babel/helper-validator-identifier": "npm:@babel/helper-validator-identifier@^8.0.0-rc.5",
     "@babel/parser": "npm:@babel/parser@^8.0.0-rc.5",
     "@babel/traverse": "npm:@babel/traverse@^8.0.0-rc.5",
     "@babel/types": "npm:@babel/types@^8.0.0-rc.5",
