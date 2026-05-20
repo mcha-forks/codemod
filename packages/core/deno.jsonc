@@ -1,6 +1,6 @@
 {
   "name": "@codemod/core",
-  "version": "2.2.2",
+  "version": "3.0.0",
   "license": "Apache-2.0",
   "exports": "./mod.ts",
   "imports": {
